@@ -1,0 +1,292 @@
+    1  history
+    2  ls
+    3  cd OVAS
+    4  ls
+    5  cd ..
+    6  ñs
+    7  ls
+    8  cd Vídeos/
+    9  ls
+   10  cd...
+   11  cd..
+   12  cd ..
+   13  ls
+   14  clear
+   15  curl -sq https://get.docker.com | sudo bash
+   16  apt-get install curl
+   17  sudo apt-get install curl
+   18  su -
+   19  docker
+   20  docker run -ti centos
+   21  su -
+   22  logout
+   23  docker run -ti centos
+   24  ls
+   25  docker ps
+   26  docker ps -a
+   27  docker run -ti --name blablabla centos:7
+   28  docker ps -a
+   29  docker attach blablabla
+   30  docker run -ti --name blablabla centos:7
+   31  docker rm blablabla
+   32  docker run -ti --name blablabla centos:7
+   33  docker ps -a
+   34  docker rm blablabla
+   35  ls
+   36  docker ps -a
+   37  mkdir datoslocal
+   38  pwd
+   39  docker run -ti -v /home/devops/misdatos centos
+   40  cd misdatoslocal
+   41  ls
+   42  mkdir misdatoslocal
+   43  ls
+   44  docker run -ti -v /home/devops/misdatos centos
+   45  ls
+   46  cd misdatoslocal/
+   47  ls
+   48  docker run -ti -v /home/devops/misdatos centos
+   49  ls
+   50  docker run -ti -v /home/devops/misdatoslocal:/misdatos centos
+   51  ls
+   52  docker ps -a
+   53  docker ps 
+   54  docker run -d -v /home/devops/misdatoslocal:/misdatoslocal nginx
+   55  ls
+   56  docker ps 
+   57  docker exec -ti practical_lalande /bin/bash
+   58  ls
+   59  ifconfig
+   60  ipconfig
+   61  ifconfig
+   62  ipconfig
+   63  clear
+   64  su
+   65  docker
+   66  docker ps
+   67  docker ps -a
+   68  history
+   69  docker run -d -v /home/devops/misdatoslocal:/misdatoslocal nginx
+   70  docker ps
+   71  ls
+   72  cd misdatoslocal
+   73  ls
+   74  touch index.html
+   75  echo hola caracola >index.html 
+   76  ls
+   77  cat hola
+   78  cat index.html 
+   79  ls
+   80  clear
+   81  docker
+   82  docker ps -a
+   83  docker
+   84  docker attach 7c579c6422a2
+   85  docker ps -a
+   86  docker ps 
+   87  docker run --name nginxprov -v /home/devops/misdatoslocal/:/usr/share/nginx/html:rw -d nginx -p 8080:80
+   88  docker run --name nginxprov -v /home/devops/misdatoslocal/:/usr/share/nginx/html:rw -d nginx 
+   89  docker run --name nginxprov -v /home/devops/misdatoslocal/:/usr/share/nginx/html:rw 
+   90  docker run --name nginxprov -v /home/devops/misdatoslocal/:/usr/share/nginx/html:rw nginx
+   91  docker run --name nginxprov -v /home/devops/misdatoslocal/:/usr/share/nginx/html:rw -d nginx
+   92  docker run --name nginxprov -v /home/devops/misdatoslocal/:/usr/share/nginx/html:ro -d nginx
+   93  docker run  -v /home/devops/misdatoslocal/:/usr/share/nginx/html:ro -d nginx
+   94  docker ps
+   95  docker run  -v /home/devops/misdatoslocal/:/usr/share/nginx/html:ro -d nginx
+   96  docker run  -p 8080:80 -v /home/devops/misdatoslocal/:/usr/share/nginx/html:ro -d nginx
+   97  docker ps
+   98  docker kill $(docker ps -q)
+   99  docker rmi $(docker images -q)
+  100  docker run  -p 8080:80 -v /home/devops/misdatoslocal/:/usr/share/nginx/html:ro -d nginx
+  101  ls
+  102  vim dockerfile
+  103  docker buid .
+  104  ls
+  105  docker 
+  106  docker build
+  107  docker build .
+  108  ls
+  109  docker build . dockerfile
+  110  docker build -t dockerfile . 
+  111  ls
+  112  chmod 777 *
+  113  ls
+  114  docker build -t dockerfile . 
+  115  docker build dockerfile
+  116  ls
+  117  mv dockerfile vandofile
+  118  docker build -t vandofile .
+  119  vim vandofile 
+  120  docker build -t vandofile -f vandofile 
+  121  docker build  -f vandofile -t vandofile
+  122  docker build  -f vandofile -t vandofile:1
+  123  docker build  --file vandofile -t vandofile:1
+  124  docker build --help
+  125  docker build  -f vandofile -t vandofile:1
+  126  docker build  -f vandofile  vandofile:1
+  127  mv vandofile Dockerfile
+  128  docker build -t vandofile:1 .
+  129  ls -la
+  130  sudo docker build -t vandofile:1 .
+  131  su 
+  132  sudo docker build -t vandofile:1 .
+  133  vim Dockerfile
+  134  sudo docker build -t vandofile:1 .
+  135  docker ps
+  136  ls
+  137  vim Dockerfile 
+  138  sudo docker build -t vandofile:1 .
+  139  docker run vandofile
+  140  ñs
+  141  ls
+  142  docker login
+  143  docker push vandofile
+  144  ls
+  145  docker push Dockerfile
+  146  ls
+  147  sudo docker build -t vandofile:1 .
+  148  ls
+  149  docker ps -a
+  150  docker ps 
+  151  sudo docker build -t vandofile:1 .
+  152  docker run -ti vandofile
+  153  docker run -ti vandofile:1
+  154  docker ps
+  155  docker rm  tar xvzf /latest.tar.gz -C /var/www/html --strip-components=1       &&    rm /latest.tar.gz                                                   &&    chown -R apache:apache /var/www/                                    && q
+  156  clear
+  157  ls
+  158  docker inspect 
+  159  docker ps -a
+  160  history
+  161  docker kill $(docker ps -q)
+  162  sudo docker build -t vandofile:1 .
+  163  docker run -ti vandofile:1
+  164  docker ps -a
+  165  docker ps 
+  166  docker attach vandofile:1
+  167  docker attach vandofile
+  168  docker attach peaceful_wiles
+  169  vim Dockerfile 
+  170  sudo docker build -t vandofile:1 .
+  171  vim Dockerfile 
+  172  sudo docker build -t vandofile:1 .
+  173  docker run -ti vandofile:1
+  174  vim Dockerfile 
+  175  sudo docker build -t vandofile:1 .
+  176  docker run -ti vandofile:1
+  177  vim Dockerfile 
+  178  sudo docker build -t vandofile:1 .
+  179  docker run -ti vandofile:1
+  180  vim Dockerfile 
+  181  sudo docker build -t vandofile:1 .
+  182  docker run -ti vandofile:1
+  183  vim Dockerfile 
+  184  sudo docker build -t vandofile:1 .
+  185  docker run -ti vandofile:1
+  186  vim Dockerfile 
+  187  sudo docker build -t vandofile:1 .
+  188  vim Dockerfile 
+  189  sudo docker build -t vandofile:1 .
+  190  docker run -ti vandofile:1
+  191  vim Dockerfile 
+  192  sudo docker build -t vandofile:1 .
+  193  docker run -ti vandofile:1
+  194  docker ps 
+  195  docker run -ti vandofile:1
+  196  docker ps 
+  197  vim Dockerfile 
+  198  sudo docker build -t vandofile:1 .
+  199  vim Dockerfile 
+  200  sudo docker build -t vandofile:1 .
+  201  docker run -ti vandofile:1
+  202  docker ps
+  203  vim Dockerfile 
+  204  sudo docker build -t vandofile:1 .
+  205  docker run -ti vandofile:1
+  206  vim Dockerfile 
+  207  sudo docker build -t vandofile:1 .
+  208  docker run -d vandofile:1
+  209  docker ps
+  210  docker logs elegant_nightingale 
+  211  vim Dockerfile 
+  212  sudo docker build -t vandofile:1 .
+  213  docker run -d vandofile:1
+  214  docker attach 3f50a15313a3971e1dade8d2cb792c325d57b6f6322993ad10196e765695bc14
+  215  docker ps
+  216  docker attach c09d55519daf
+  217  docker ps
+  218  docker kill $(docker ps -q)
+  219  docker push sirvando/myfirstdockerfile:prueba
+  220  git
+  221  ls
+  222  cd misdatoslocal
+  223  ls
+  224  mkdir github
+  225  cd githug
+  226  ls
+  227  cd github/
+  228  ls
+  229  git clone https://github.com/sirvandod/myfirstdockerfiles
+  230  apt-get install git
+  231  sudo apt-get install git
+  232  git clone https://github.com/sirvandod/myfirstdockerfiles
+  233  ls
+  234  cd ..
+  235  rm -rf github/
+  236  ls
+  237  git clone https://github.com/sirvandod/myfirstdockerfiles
+  238  ls
+  239  cp Dockerfile ./myfirstdockerfiles/
+  240  ls
+  241  cd myfirstdockerfiles/
+  242  ls
+  243  cd ..
+  244  ls
+  245  git commit
+  246  cd myfirstdockerfiles/
+  247  git commit
+  248  vim Dockerfile 
+  249  git commit
+  250  git add Dockerfile 
+  251  git commit
+  252  git commit .
+  253  git config --global user.email "servando.dominguez@gmail.com"
+  254  git commit .
+  255  git push
+  256  sudo docker build -t vandofile:1 .
+  257  vim Dockerfile 
+  258  sudo docker build -t vandofile:1 .
+  259  docker run -d vandofile:1
+  260  docker ps
+  261  docker run -ti vandofile:1
+  262  vim Dockerfile 
+  263  sudo docker build -t vandofile:1 .
+  264  docker push sirvando/myfirstdockerfile:1
+  265  docker push vandofile:1
+  266  sudo docker build -t sirvando/myfirstdockerfile:1 .
+  267  docker run -ti sirvando/myfirstdockerfile:1
+  268  ls
+  269  docker push sirvando/myfirstdockerfile:1
+  270  docker search redis
+  271  docker run -d redis
+  272  docker ps
+  273  vim Dockerfile 
+  274  sudo docker build -t sirvando/myfirstdockerfile:1 .
+  275  vim Dockerfile 
+  276  sudo docker build -t sirvando/myfirstdockerfile:1 .
+  277  docker run -ti sirvando/myfirstdockerfile:1
+  278  docker ps
+  279  docker network ls
+  280  ip a
+  281  sudo brctl show
+  282  apt-get install brctl
+  283  sudo apt-get install brctl
+  284  docker network create --attachable backend
+  285  docker network ls
+  286  docker run -d --network backend redis  
+  287  docker ps
+  288  history
+  289  history >history.txt
+  290  ls
+  291  cd ..
+  292  history >history.txt

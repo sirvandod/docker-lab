@@ -1,0 +1,22 @@
+services:
+ portainer:
+  image: portainer/portainer
+  ports:
+   -9000:9000
+  networks:
+   -proxy
+  volumes:
+   -/var/run/docker.sock:/var/run/docker.sock
+   -${REMOTE_MOUNT}/portainer/portainer/data:/data
+  deploy:
+   mode: replicated
+   replicas: 1
+   labels:
+    traefik.port: 9000
+    traefik.frontend.rule: 'Host:portainer.${SWARM_DOMAIN}'
+    traefik.docker.network: 'proxy'
+   placement:
+    constraints: [node.role == manager]
+networks:
+ proxy:
+  external:true

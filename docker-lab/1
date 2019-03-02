@@ -1,0 +1,13 @@
+FROM centos:7
+LABEL maintainer="Yo mismo"
+
+RUN yum update -y && \
+    yum install -y wget && \
+    yum install -y  httpd php php-mysql && \
+    wget https://wordpress.org/latest.tar.gz && \
+    tar xvzf /latest.tar.gz -C /var/www/html && \
+    mv /var/www/html/wordpress/* /var/www/html/ && \
+    yum clean all 
+ENTRYPOINT ["/usr/sbin/apachectl -DFOREGROUND"]
+#ENTRYPOINT ["/bin/bash"]
+EXPOSE 80
